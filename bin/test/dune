@@ -1,0 +1,3 @@
+(executables
+ (names parser)
+ (libraries ast_entry))
