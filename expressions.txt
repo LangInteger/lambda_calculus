@@ -1,5 +1,9 @@
 x
+x y z
 λx.(x)
 (x) (y)
 λx.x y
+λx.x y z
 λx.(x y)
+x (λx.x)
+x λx.x y z

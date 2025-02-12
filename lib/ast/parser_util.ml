@@ -2,7 +2,7 @@ open Ast
 
 let read_line i = try Some (input_line i) with End_of_file -> None 
 
-let lines_from_files filename = 
+let lines_from_file filename = 
   let rec lines_from_files_aux i acc = match (read_line i) with 
     | None -> List.rev acc
     | Some s -> lines_from_files_aux i (s :: acc) in 
@@ -46,7 +46,7 @@ let parse_inputs (s : string list) : expr list =
   List.map parse_input s
 
 let parse(file_addr: string): expr list  =
-  parse_inputs (lines_from_files file_addr)
+  parse_inputs (lines_from_file file_addr)
 
 let rec pprint_expr (exp: expr): string =
   match exp with
